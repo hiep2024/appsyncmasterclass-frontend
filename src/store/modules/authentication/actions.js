@@ -7,7 +7,7 @@ const IDENTITY_POOL_ID = process.env.VUE_APP_AUTH_IDENTITY_POOL_ID;
 const STREAM_NAME = process.env.VUE_APP_AWS_KINESIS_FIREHOSE_DELIVERY_STREAM_NAME;
 
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: IDENTITY_POOL_ID 
+  IdentityPoolId: IDENTITY_POOL_ID, 
 })
 
 const FirehoseClient = new AWS.Firehose();

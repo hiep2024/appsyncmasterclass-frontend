@@ -230,7 +230,7 @@ export default {
       'signInUser',
       'resendSignUp',
       'logoutUser',
-      'trackEvent'
+      // 'trackEvent'
     ]),
     async signMeUp() {
       try {
@@ -283,12 +283,12 @@ export default {
       }
     },
     async setSignUpStep(step){
-      await this.trackEvent({
-        eventType: 'funnel',
-        detail: {
-          signUpStep: step
-        }
-      })
+      // await this.trackEvent({
+      //   eventType: 'funnel',
+      //   detail: {
+      //     signUpStep: step
+      //   }
+      // })
       switch(step){
         case 'step2':
           if (!this.name || !this.email || !this.birthdate) {
